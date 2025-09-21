@@ -1,0 +1,52 @@
+---
+---
+
+<nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-purple-100/20 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/mn-logo.png" alt="Mind Nexus" class="h-8 w-auto" />
+          <span class="font-semibold text-lg">Mind Nexus</span>
+        </a>
+      </div>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">About</a>
+        <a href="#product" class="text-gray-700 hover:text-purple-600 transition-colors">Product</a>
+        <a href="#team" class="text-gray-700 hover:text-purple-600 transition-colors">Team</a>
+        <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+      </div>
+
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <div class="px-6 py-4 space-y-3">
+      <a href="#about" class="block text-gray-700 hover:text-purple-600 transition-colors">About</a>
+      <a href="#product" class="block text-gray-700 hover:text-purple-600 transition-colors">Product</a>
+      <a href="#team" class="block text-gray-700 hover:text-purple-600 transition-colors">Team</a>
+      <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
