@@ -1,108 +1,182 @@
 ---
+const features = [
+  {
+    title: "Generate months of content in minutes",
+    description: "AI-powered content generation that understands your industry and audience",
+    icon: "zap"
+  },
+  {
+    title: "Maintain unique voice for each client",
+    description: "Our AI learns and adapts to each client's distinct tone and style",
+    icon: "fingerprint"
+  },
+  {
+    title: "Performance-optimized content by default",
+    description: "Every post is engineered for maximum engagement and reach",
+    icon: "trending"
+  },
+  {
+    title: "Full control with easy review and editing",
+    description: "Intuitive interface for reviewing, editing, and scheduling content",
+    icon: "edit"
+  }
+];
 ---
 
-<section id="product" class="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white relative">
-  <!-- Subtle decoration -->
-  <div class="absolute top-1/2 left-0 w-72 h-72 bg-purple-100/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Product</h2>
-      <p class="text-xl text-gray-600">Transforming LinkedIn content management</p>
+<section id="product" class="relative py-32 lg:py-40 overflow-hidden bg-surface-elevated">
+  <!-- Background elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+    <div class="absolute -top-32 left-1/4 w-[500px] h-[500px] bg-brand-700/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brand-600/10 rounded-full blur-[100px]"></div>
+
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px); background-size: 60px 60px;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="inline-block text-brand-400 text-sm font-semibold tracking-widest uppercase mb-4">Our Product</span>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-text-primary leading-tight mb-6">
+        The Command Center for
+        <span class="gradient-text">LinkedIn Management</span>
+      </h2>
+      <p class="text-lg text-text-secondary leading-relaxed">
+        Postline.ai enables agencies and content professionals to manage multiple LinkedIn
+        accounts at scale without sacrificing quality or authenticity.
+      </p>
     </div>
 
-    <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-10 md:p-14 border border-purple-100/20">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <!-- Left column - Content -->
-        <div class="flex-1">
-          <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="inline-block">
-            <img src="/postline-logo-official.png" alt="Postline.ai" class="h-12 mb-6 hover:opacity-80 transition-opacity" />
-          </a>
+    <!-- Product showcase -->
+    <div class="relative mb-24">
+      <!-- Product card -->
+      <div class="relative rounded-3xl overflow-hidden bg-surface border border-white/5 glow-purple-strong">
+        <!-- Inner glow -->
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-600/5 via-transparent to-brand-900/5"></div>
 
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            The Command Center for Professional LinkedIn Management
-          </h3>
-
-          <div class="space-y-4 text-gray-600 mb-6">
-            <p>
-              <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-600 hover:text-purple-700 underline decoration-purple-300 hover:decoration-purple-500 transition-colors">Postline.ai</a> enables agencies and content professionals to manage multiple LinkedIn
-              accounts at scale without sacrificing quality or authenticity.
-            </p>
-
-            <p>
-              Our AI-powered platform generates high-performance content in minutes, learns each
-              client's unique voice over time, and provides the leverage needed to transform
-              agency operations.
-            </p>
-
-            <p>
-              With proven traction and growing adoption, <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-600 hover:text-purple-700 underline decoration-purple-300 hover:decoration-purple-500 transition-colors">Postline.ai</a> is already helping agencies
-              scale from managing a handful of clients to effortlessly handling twenty or more.
-            </p>
-          </div>
-
-          <div class="space-y-3 mb-8">
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-700">Generate months of content in minutes</span>
+        <div class="relative p-8 lg:p-12">
+          <!-- Header -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+            <div class="flex items-center gap-4">
+              <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="block">
+                <img src="/postline-logo-official.png" alt="Postline.ai" class="h-10 lg:h-12 hover:opacity-80 transition-opacity" />
+              </a>
+              <div class="h-8 w-px bg-white/10"></div>
+              <span class="text-sm text-text-muted">Flagship Product</span>
             </div>
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-700">Maintain unique voice for each client</span>
-            </div>
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-700">Performance-optimized content by default</span>
-            </div>
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span class="text-gray-700">Full control with easy review and editing</span>
+            <div class="flex gap-3">
+              <a
+                href="https://postline.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-semibold rounded-full transition-all hover:shadow-lg hover:shadow-brand-500/25"
+              >
+                Visit Postline.ai
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+              <a
+                href="https://beta.postline.ai/sign-in"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-6 py-3 border border-white/10 hover:border-white/20 text-text-primary font-semibold rounded-full transition-all hover:bg-white/5"
+              >
+                Try Demo
+              </a>
             </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://postline.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Visit Postline.ai
-              <svg class="ml-2 w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </a>
-            <a
-              href="https://beta.postline.ai/sign-in"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-6 py-3 border border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors"
-            >
-              Try Demo
+          <!-- Screenshot with glow -->
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-brand-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="block relative">
+              <div class="relative rounded-xl overflow-hidden border border-white/10">
+                <img
+                  src="/postline-screenshot.png"
+                  alt="Postline.ai Interface"
+                  class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                <!-- Overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-60"></div>
+              </div>
             </a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Right column - Screenshot -->
-        <div class="flex-1 max-w-lg">
-          <a href="https://postline.ai" target="_blank" rel="noopener noreferrer" class="block group">
-            <div class="relative rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-purple-100/20">
-              <img
-                src="/postline-screenshot.png"
-                alt="Postline.ai Interface"
-                class="w-full h-auto group-hover:scale-105 transition-transform duration-300"
-              />
-              <div class="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <!-- Features section -->
+    <div class="mb-20">
+      <h3 class="font-display text-2xl lg:text-3xl text-text-primary text-center mb-12">
+        Everything you need to scale
+      </h3>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {features.map((feature, index) => (
+          <div class="group relative p-6 rounded-2xl bg-surface border border-white/5 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
+            <!-- Feature icon -->
+            <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center mb-4 group-hover:bg-brand-600/20 transition-colors">
+              {feature.icon === 'zap' && (
+                <svg class="w-6 h-6 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              )}
+              {feature.icon === 'fingerprint' && (
+                <svg class="w-6 h-6 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/>
+                  <path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"/>
+                  <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/>
+                  <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/>
+                  <path d="M8.65 22c.21-.66.45-1.32.57-2"/>
+                  <path d="M14 13.12c0 2.38 0 6.38-1 8.88"/>
+                  <path d="M2 16h.01"/>
+                  <path d="M21.8 16c.2-2 .131-5.354 0-6"/>
+                  <path d="M9 6.8a6 6 0 0 1 9 5.2c0 .47 0 1.17-.02 2"/>
+                </svg>
+              )}
+              {feature.icon === 'trending' && (
+                <svg class="w-6 h-6 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                  <polyline points="17 6 23 6 23 12"/>
+                </svg>
+              )}
+              {feature.icon === 'edit' && (
+                <svg class="w-6 h-6 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+              )}
             </div>
+
+            <h4 class="font-semibold text-text-primary mb-2">{feature.title}</h4>
+            <p class="text-sm text-text-muted">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center">
+      <div class="relative inline-block">
+        <div class="absolute -inset-4 bg-brand-500/20 rounded-full blur-2xl"></div>
+        <div class="relative space-y-4">
+          <p class="text-lg text-text-secondary">
+            With proven traction and growing adoption, Postline.ai is already helping agencies
+            scale from managing a handful of clients to effortlessly handling twenty or more.
+          </p>
+          <a
+            href="https://postline.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 font-semibold transition-colors"
+          >
+            Explore what's possible
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
           </a>
-          <p class="text-sm text-gray-500 text-center mt-3">Click to explore Postline.ai</p>
         </div>
       </div>
     </div>
