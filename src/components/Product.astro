@@ -43,8 +43,8 @@ const features = [
         <span class="gradient-text">LinkedIn Management</span>
       </h2>
       <p class="text-lg text-text-secondary leading-relaxed">
-        Postline.ai enables agencies and content professionals to manage multiple LinkedIn
-        accounts at scale without sacrificing quality or authenticity.
+        Postline.ai is built for <strong class="text-text-primary">marketing agencies, social media managers, and content teams</strong> who
+        manage multiple LinkedIn accounts. Generate, review, and schedule months of authentic content in minutes.
       </p>
     </div>
 
@@ -63,7 +63,10 @@ const features = [
                 <img src="/postline-logo-official.png" alt="Postline.ai" class="h-10 lg:h-12 hover:opacity-80 transition-opacity" />
               </a>
               <div class="h-8 w-px bg-white/10"></div>
-              <span class="text-sm text-text-muted">Flagship Product</span>
+              <div class="flex flex-col">
+                <span class="text-sm text-text-muted">Flagship Product</span>
+                <span class="text-xs text-brand-400">Live in Production · Since January 2025</span>
+              </div>
             </div>
             <div class="flex gap-3">
               <a
@@ -102,6 +105,26 @@ const features = [
                 <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-60"></div>
               </div>
             </a>
+          </div>
+
+          <!-- Traction metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-white/5">
+            <div class="text-center">
+              <div class="font-display text-2xl lg:text-3xl text-text-primary mb-1">Hundreds</div>
+              <div class="text-sm text-text-muted">Active Users</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-2xl lg:text-3xl text-text-primary mb-1">Thousands</div>
+              <div class="text-sm text-text-muted">Posts Generated</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-2xl lg:text-3xl text-brand-400 mb-1">4.8★</div>
+              <div class="text-sm text-text-muted">User Rating</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-2xl lg:text-3xl text-text-primary mb-1">186+</div>
+              <div class="text-sm text-text-muted">Reviews</div>
+            </div>
           </div>
         </div>
       </div>
@@ -154,6 +177,35 @@ const features = [
             <p class="text-sm text-text-muted">{feature.description}</p>
           </div>
         ))}
+      </div>
+    </div>
+
+    <!-- Pricing model -->
+    <div class="mb-20">
+      <h3 class="font-display text-2xl lg:text-3xl text-text-primary text-center mb-4">
+        Simple, Per-Account Pricing
+      </h3>
+      <p class="text-center text-text-secondary mb-10 max-w-2xl mx-auto">
+        B2B SaaS subscription model with three tiers designed for individuals, businesses, and agencies.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="p-6 rounded-2xl bg-surface border border-white/5 text-center">
+          <div class="text-sm text-text-muted uppercase tracking-wider mb-2">Pro</div>
+          <div class="font-display text-3xl text-text-primary mb-2">$9.90<span class="text-lg text-text-muted">/mo</span></div>
+          <div class="text-sm text-text-muted">Per LinkedIn account</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-surface border border-brand-500/30 text-center relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-brand-600 text-xs font-semibold rounded-full">Popular</div>
+          <div class="text-sm text-brand-400 uppercase tracking-wider mb-2">Business</div>
+          <div class="font-display text-3xl text-text-primary mb-2">$19.99<span class="text-lg text-text-muted">/mo</span></div>
+          <div class="text-sm text-text-muted">Per LinkedIn account</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-surface border border-white/5 text-center">
+          <div class="text-sm text-text-muted uppercase tracking-wider mb-2">Agency</div>
+          <div class="font-display text-3xl text-text-primary mb-2">$79.99<span class="text-lg text-text-muted">/mo</span></div>
+          <div class="text-sm text-text-muted">Per LinkedIn account</div>
+        </div>
       </div>
     </div>
 
