@@ -2,15 +2,23 @@
 const founders = [
   {
     name: "Jakub Skałecki",
-    role: "Co-Founder",
-    bio: "Experienced software engineer and entrepreneur focused on AI-powered solutions for content creation and management.",
+    role: "Co-Founder & CTO",
+    bio: [
+      "Full-stack engineer and entrepreneur with over 12 years of experience taking products from concept to revenue. His technical expertise spans Applied AI, frontend development (React, Vue, TypeScript), backend systems (Python, JavaScript, Elixir), and cloud infrastructure (Kubernetes, GCP, AWS).",
+      "Previously led development at Videobeat Networks—where he first crossed paths with Christoph—and built Machine Learning solutions at Sigmoidal.io. He also founded pvpcenter.eu and delivered multiple successful products as an independent consultant. Jakub holds a Master's degree in Informatics from Warsaw University of Technology.",
+      "His approach: build the simplest solution that works, stay close to users, and never let technology become the goal instead of the means."
+    ],
     linkedin: "https://www.linkedin.com/in/jskalec/",
     image: "/jakub.png"
   },
   {
     name: "Christoph Gaschler",
-    role: "Co-Founder",
-    bio: "Business strategist and marketing expert with deep expertise in LinkedIn growth and content optimization.",
+    role: "Co-Founder & CEO",
+    bio: [
+      "Serial entrepreneur with over 15 years of experience building technology-driven companies. As founder and CEO of Videobeat Networks, Christoph scaled the company into one of Europe's leading data-driven video marketing firms, reaching eight-figure annual revenues, 80 employees, and five offices across Europe. In 2018, Videobeat was successfully acquired by the global advertising group Dentsu.",
+      "After his exit, Christoph became an angel investor focused on technology ventures in Longevity, Climate Tech, and Artificial Intelligence. With Postline.ai, he is now building an AI platform that helps individuals and teams create high-quality LinkedIn content—faster, data-driven, and in their unique voice.",
+      "His mission: to harness technology that amplifies human creativity—rather than replacing it."
+    ],
     linkedin: "https://www.linkedin.com/in/cgaschler/",
     image: "/christoph.png"
   }
@@ -22,6 +30,7 @@ const founders = [
   <div class="absolute inset-0">
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
     <div class="absolute top-1/2 left-0 w-[400px] h-[400px] bg-brand-900/10 rounded-full blur-[100px] -translate-x-1/2"></div>
+    <div class="absolute bottom-1/4 right-0 w-[300px] h-[300px] bg-brand-800/10 rounded-full blur-[80px] translate-x-1/2"></div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -34,50 +43,58 @@ const founders = [
       </h2>
       <p class="text-lg text-text-secondary leading-relaxed">
         A team combining deep technical expertise with strategic business acumen,
-        united by a vision to transform how agencies approach LinkedIn.
+        united by a vision to transform how professionals approach LinkedIn.
       </p>
     </div>
 
-    <!-- Team grid -->
-    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-      {founders.map((founder, index) => (
+    <!-- Team cards - single column for longer bios -->
+    <div class="space-y-12 max-w-6xl mx-auto">
+      {founders.map((founder) => (
         <div class="group relative">
           <div class="relative bg-surface-elevated rounded-3xl overflow-hidden border border-white/5 hover:border-brand-500/20 transition-all duration-500">
             <!-- Hover glow -->
             <div class="absolute inset-0 bg-gradient-to-br from-brand-600/0 via-brand-600/0 to-brand-600/0 group-hover:from-brand-600/5 group-hover:via-transparent group-hover:to-brand-900/5 transition-all duration-500"></div>
 
-            <div class="relative p-8 lg:p-10">
+            <div class="relative flex flex-col lg:flex-row">
               <!-- Image container -->
-              <div class="relative mb-8">
-                <div class="absolute -inset-4 bg-brand-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-white/5">
-                  <img
-                    src={founder.image}
-                    alt={founder.name}
-                    class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <!-- Overlay gradient -->
-                  <div class="absolute inset-0 bg-gradient-to-t from-surface-elevated/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="lg:w-80 flex-shrink-0 p-8 lg:p-10">
+                <div class="relative">
+                  <div class="absolute -inset-4 bg-brand-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div class="relative aspect-square rounded-2xl overflow-hidden">
+                    <img
+                      src={founder.image}
+                      alt={founder.name}
+                      class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <!-- Overlay gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-elevated/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
                 </div>
               </div>
 
               <!-- Content -->
-              <div class="space-y-4">
-                <div>
-                  <h3 class="font-display text-2xl lg:text-3xl text-text-primary mb-1">{founder.name}</h3>
-                  <p class="text-brand-400 font-medium">{founder.role}</p>
+              <div class="flex-1 p-8 lg:p-10 lg:pl-0">
+                <div class="mb-6">
+                  <h3 class="font-display text-2xl lg:text-3xl text-text-primary mb-2">{founder.name}</h3>
+                  <p class="text-brand-400 font-semibold">{founder.role}</p>
                 </div>
 
-                <p class="text-text-secondary leading-relaxed">
-                  {founder.bio}
-                </p>
+                <div class="space-y-4 text-text-secondary leading-relaxed mb-8">
+                  {Array.isArray(founder.bio) ? (
+                    founder.bio.map((paragraph) => (
+                      <p>{paragraph}</p>
+                    ))
+                  ) : (
+                    <p>{founder.bio}</p>
+                  )}
+                </div>
 
                 <!-- LinkedIn link -->
                 <a
                   href={founder.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center gap-3 pt-4 text-text-muted hover:text-brand-400 transition-colors group/link"
+                  class="inline-flex items-center gap-3 text-text-muted hover:text-brand-400 transition-colors group/link"
                 >
                   <span class="w-10 h-10 rounded-full bg-surface flex items-center justify-center border border-white/5 group-hover/link:border-brand-500/30 group-hover/link:bg-brand-600/10 transition-all">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
